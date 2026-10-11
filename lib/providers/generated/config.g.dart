@@ -1048,3 +1048,55 @@ abstract class _$HealthCheckTimeout extends $Notifier<int> {
     return element.handleCreate(ref, build);
   }
 }
+
+@ProviderFor(GlobalRules)
+final globalRulesProvider = GlobalRulesProvider._();
+
+final class GlobalRulesProvider
+    extends $NotifierProvider<GlobalRules, List<GlobalRule>> {
+  GlobalRulesProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'globalRulesProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$globalRulesHash();
+
+  @$internal
+  @override
+  GlobalRules create() => GlobalRules();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(List<GlobalRule> value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<List<GlobalRule>>(value),
+    );
+  }
+}
+
+String _$globalRulesHash() => r'b9e8feae7cab921dea15c2ebd776a8b967b281c6';
+
+abstract class _$GlobalRules extends $Notifier<List<GlobalRule>> {
+  List<GlobalRule> build();
+  @$mustCallSuper
+  @override
+  WhenComplete runBuild() {
+    final ref = this.ref as $Ref<List<GlobalRule>, List<GlobalRule>>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<List<GlobalRule>, List<GlobalRule>>,
+              List<GlobalRule>,
+              Object?,
+              Object?
+            >;
+    return element.handleCreate(ref, build);
+  }
+}

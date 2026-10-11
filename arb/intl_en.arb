@@ -594,10 +594,10 @@
   "basicConfigDesc": "Global core settings",
   "selectedCountTitle": "{count} items selected",
   "addRule": "Add Rule",
-  "ruleName": "Rule Name",
-  "content": "Content",
+  "ruleName": "Type",
+  "content": "Match",
   "subRule": "Sub Rule",
-  "ruleTarget": "Rule Target",
+  "ruleTarget": "Node",
   "sourceIp": "Source IP",
   "noResolve": "No Resolve",
   "getOriginRules": "Original Rules",
@@ -821,7 +821,21 @@
   "logLevelDebugHint": "{level} mode is for network debugging; turn it off for daily use",
   "collapse": "Collapse",
   "analyzeLogPrompt": "Analyze Bettbox (Mihomo) log: {log}",
-  "geoBuiltInResources": "GEO Built-in Resources"
+  "geoBuiltInResources": "GEO Built-in Resources",
+  "splitRouting": "Split Routing",
+  "splitRoutingDesc": "Append global routing rules",
+  "splitRoutingApply": "Apply",
+  "splitRoutingApplied": "Applied",
+  "ruleActionDomain": "Domain",
+  "ruleActionDomainSuffix": "Domain (Suffix)",
+  "ruleActionDomainWildcard": "Domain (Wildcard)",
+  "ruleActionDomainKeyword": "Domain (Keyword)",
+  "ruleActionDomainRegex": "Domain (Regex)",
+  "ruleActionIpCidr": "Target IP",
+  "ruleActionDstPort": "Target Port",
+  "ruleActionProcessName": "Process Name",
+  "ruleActionGeosite": "Domain (Geo)",
+  "ruleActionGeoip": "Target IP (Geo)"
 }
 
 

@@ -594,10 +594,10 @@
   "basicConfigDesc": "Глобальное изменение конфигурации ядра",
   "selectedCountTitle": "Выбрано: {count}",
   "addRule": "Добавить правило",
-  "ruleName": "Имя правила",
-  "content": "Содержимое",
+  "ruleName": "Тип",
+  "content": "Совпадение",
   "subRule": "Подправило",
-  "ruleTarget": "Цель правила",
+  "ruleTarget": "Узел",
   "sourceIp": "IP источника",
   "noResolve": "Не разрешать IP",
   "getOriginRules": "Получить исходные правила",
@@ -825,7 +825,21 @@
   "logLevelDebugHint": "Режим {level} подходит для отладки сети; в обычной работе его лучше отключить",
   "collapse": "Свернуть",
   "analyzeLogPrompt": "Проанализируй лог Bettbox (Mihomo): {log}",
-  "geoBuiltInResources": "Встроенные ресурсы GEO"
+  "geoBuiltInResources": "Встроенные ресурсы GEO",
+  "splitRouting": "Раздельная маршрутизация",
+  "splitRoutingDesc": "Добавить глобальные правила",
+  "splitRoutingApply": "Применить",
+  "splitRoutingApplied": "Применено",
+  "ruleActionDomain": "Домен",
+  "ruleActionDomainSuffix": "Домен (суффикс)",
+  "ruleActionDomainWildcard": "Домен (шаблон)",
+  "ruleActionDomainKeyword": "Домен (ключевое слово)",
+  "ruleActionDomainRegex": "Домен (regex)",
+  "ruleActionIpCidr": "IP назначения",
+  "ruleActionDstPort": "Порт назначения",
+  "ruleActionProcessName": "Имя процесса",
+  "ruleActionGeosite": "Домен (Geo)",
+  "ruleActionGeoip": "IP назначения (Geo)"
 }
 
 

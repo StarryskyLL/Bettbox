@@ -594,10 +594,10 @@
   "basicConfigDesc": "カーネル設定をグローバル変更",
   "selectedCountTitle": "{count} 件選択中",
   "addRule": "ルール追加",
-  "ruleName": "ルール名",
-  "content": "内容",
+  "ruleName": "種類",
+  "content": "一致",
   "subRule": "サブルーール",
-  "ruleTarget": "ルールターゲット",
+  "ruleTarget": "ノード",
   "sourceIp": "送信元IP",
   "noResolve": "IP解決を行わない",
   "getOriginRules": "元のルールを取得",
@@ -822,7 +822,21 @@
   "logLevelDebugHint": "{level}モードはネットワークのデバッグ向けです。普段はオフにすることをおすすめします",
   "collapse": "折りたたむ",
   "analyzeLogPrompt": "Bettbox(Mihomo)のログを分析:{log}",
-  "geoBuiltInResources": "GEO 組み込みリソース"
+  "geoBuiltInResources": "GEO 組み込みリソース",
+  "splitRouting": "振り分け",
+  "splitRoutingDesc": "グローバル振り分けルールを追加",
+  "splitRoutingApply": "適用",
+  "splitRoutingApplied": "適用しました",
+  "ruleActionDomain": "ドメイン",
+  "ruleActionDomainSuffix": "ドメイン（サフィックス）",
+  "ruleActionDomainWildcard": "ドメイン（ワイルドカード）",
+  "ruleActionDomainKeyword": "ドメイン（キーワード）",
+  "ruleActionDomainRegex": "ドメイン（正規表現）",
+  "ruleActionIpCidr": "宛先 IP",
+  "ruleActionDstPort": "宛先ポート",
+  "ruleActionProcessName": "プロセス名",
+  "ruleActionGeosite": "ドメイン（Geo）",
+  "ruleActionGeoip": "宛先 IP（Geo）"
 }
 
 

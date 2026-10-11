@@ -967,20 +967,27 @@ class GlobalState {
               'rules': overrideData.runningRule,
             }
           : null,
-      'prepend-rules': [
-        if (config.vpnProps.loopbackProtection) ...[
-          if (listenPorts.isNotEmpty) ...[
-            'AND,((DST-PORT,$listenPorts),(IP-CIDR,127.0.0.0/8,no-resolve)),REJECT',
-            'AND,((DST-PORT,$listenPorts),(IP-CIDR6,::1/128,no-resolve)),REJECT',
+      // The user's own rules are prepended ahead of the built-in guards and the
+      // subscription rules. They live on the root config rather than a profile,
+      // so they survive subscription switches. mihomo evaluates rules top-down,
+      // so position is the whole contract here.
+      'prepend-rules': mergeGlobalRules(
+        globalRules: config.globalRules.runningValue,
+        rules: [
+          if (config.vpnProps.loopbackProtection) ...[
+            if (listenPorts.isNotEmpty) ...[
+              'AND,((DST-PORT,$listenPorts),(IP-CIDR,127.0.0.0/8,no-resolve)),REJECT',
+              'AND,((DST-PORT,$listenPorts),(IP-CIDR6,::1/128,no-resolve)),REJECT',
+            ],
+            if (system.isAndroid)
+              'AND,((DST-PORT,853),(IP-CIDR,198.51.100.0/30,no-resolve)),REJECT',
           ],
-          if (system.isAndroid)
-            'AND,((DST-PORT,853),(IP-CIDR,198.51.100.0/30,no-resolve)),REJECT',
+          if (config.vpnProps.disableQuic)
+            config.vpnProps.excludeChina && !isRussian
+                ? 'AND,((NETWORK,UDP),(DST-PORT,443),(NOT,((OR,((GEOSITE,geolocation-cn),(GEOIP,CN,no-resolve)))))),REJECT'
+                : 'AND,((NETWORK,UDP),(DST-PORT,443)),REJECT',
         ],
-        if (config.vpnProps.disableQuic)
-          config.vpnProps.excludeChina && !isRussian
-              ? 'AND,((NETWORK,UDP),(DST-PORT,443),(NOT,((OR,((GEOSITE,geolocation-cn),(GEOIP,CN,no-resolve)))))),REJECT'
-              : 'AND,((NETWORK,UDP),(DST-PORT,443)),REJECT',
-      ],
+      ),
       'disabled-groups': scriptActive
           ? const []
           : [

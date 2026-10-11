@@ -48,19 +48,6 @@ Bettbox意为: Better Experience, Out of the box - 更好的体验，亦开箱�
 * **社区导向**：我们会认真评估社区反馈，优先对待高质量的 Issue，你的声音不会无故被淹没。
 
 ---
-</div>
-
-###   🛩️ 推荐服务
-#### 中转 专线  〢  [百变小樱](https://www.bbxy01.com/v2/register?code=c09R)  〢  [白月光](https://www.sibker.com/register?invite_code=YZq6L5zd)  〢  [MESL](https://panel.meslcloud.com/#/register?code=7vy22Bv2)  〢  [Ytoo](https://y-too.net/aff.php?aff=10354)
---------------------------------
-#### 低价 直连  〢  [良心云](https://xn--9kqz23b19z.com/#/register?code=VTnrQYAj)  〢  [吹雪云](https://xn--9kqs1lo79d.com/#/register?code=skKMTab7)  〢  [一分](https://xn--4gqx1hgtfdmt.com/#/register?code=AuCiXprV)  〢  [赔钱机场](https://xn--mes358aby2apfg.com/register?code=z7TUZLmM&cover=sfw)
---------------------------------
-####   百变小樱专享68折优惠码：bettbox68
---------------------------------
-
-**简评** : ❚ ❚  以上链接基本为自用或TG群组群友讨论/推荐，此处仅做AFF展示(注：通过链接购买第三方服务，开发者可以获得少量的佣金支持)，这并不代表我们对其服务作出承诺或保证，鉴于一些众所周知的原因，您应该清楚明白这意味着什么，请自行甄别并合理选择。
-
----
 ## 🛠️ 安装与下载
 
 请前往 **[[Releases]](https://github.com/appshubcc/Bettbox/releases)** 页面下载最新适合您平台和系统的安装包
@@ -135,14 +122,6 @@ const Compatible_With_Bettbox = {
 
 * 未声明 `policyGroupOptions`、或声明的名称与开关不匹配时，展示效果与旧版本完全一致（所有开关平铺展示）。
 
----
-
-### ☕ 赞助支持
-
-**如果您觉得这个项目对您有所帮助，可通过以下方式赞助开发或使用[推荐链接](https://github.com/appshubcc/Bettbox#%EF%B8%8F-%E6%8E%A8%E8%8D%90%E6%9C%8D%E5%8A%A1)：**
-
-* TRON (TRC-20)：   <code>TCkTtZfF2WrciZLaJj3e1aqrh3zdTnCkDa</code>
-* Bitcoin： <code>bc1qu950cl6035qvllmzk6cfw3l30j2lg3cq9n6g6h</code>
 ---
 
 ##  致谢

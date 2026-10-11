@@ -795,7 +795,15 @@ class AddRuleDialog extends StatefulWidget {
   final ClashConfigSnippet snippet;
   final Rule? rule;
 
-  const AddRuleDialog({super.key, required this.snippet, this.rule});
+  /// Restricts the selectable rule types. Defaults to every [RuleAction].
+  final List<RuleAction> actions;
+
+  const AddRuleDialog({
+    super.key,
+    required this.snippet,
+    this.rule,
+    this.actions = RuleAction.values,
+  });
 
   @override
   State<AddRuleDialog> createState() => _AddRuleDialogState();
@@ -840,7 +848,7 @@ class _AddRuleDialogState extends State<AddRuleDialog> {
       _src = parsedRule.src;
       return;
     }
-    _ruleAction = RuleAction.values.first;
+    _ruleAction = widget.actions.first;
     if (_targetItems.isNotEmpty) {
       _ruleTargetController.text = _targetItems.first;
     }
@@ -903,7 +911,7 @@ class _AddRuleDialogState extends State<AddRuleDialog> {
     final selected = await globalState.showCommonDialog<RuleAction>(
       child: OptionsDialog<RuleAction>(
         title: appLocalizations.ruleName,
-        options: RuleAction.values,
+        options: widget.actions,
         textBuilder: (item) => item.value,
         value: _ruleAction,
       ),

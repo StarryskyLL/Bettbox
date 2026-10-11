@@ -594,10 +594,10 @@
   "basicConfigDesc": "تغییر کلی تنظیمات هسته",
   "selectedCountTitle": "{count} مورد انتخاب شده",
   "addRule": "افزودن قانون",
-  "ruleName": "نام قانون",
-  "content": "محتوا",
+  "ruleName": "نوع",
+  "content": "تطبیق",
   "subRule": "زیرقانون",
-  "ruleTarget": "مقصد قانون",
+  "ruleTarget": "گره",
   "sourceIp": "IP مبدا",
   "noResolve": "عدم تحلیل IP",
   "getOriginRules": "دریافت قوانین اصلی",
@@ -822,7 +822,21 @@
   "logLevelDebugHint": "حالت {level} برای اشکال‌زدایی شبکه مناسب است؛ در استفاده روزمره آن را خاموش کنید",
   "collapse": "جمع کردن",
   "analyzeLogPrompt": "تحلیل گزارش Bettbox (Mihomo): {log}",
-  "geoBuiltInResources": "منابع داخلی GEO"
+  "geoBuiltInResources": "منابع داخلی GEO",
+  "splitRouting": "مسیریابی تفکیکی",
+  "splitRoutingDesc": "افزودن قواعد مسیریابی سراسری",
+  "splitRoutingApply": "اعمال",
+  "splitRoutingApplied": "اعمال شد",
+  "ruleActionDomain": "دامنه",
+  "ruleActionDomainSuffix": "دامنه (پسوند)",
+  "ruleActionDomainWildcard": "دامنه (الگو)",
+  "ruleActionDomainKeyword": "دامنه (کلیدواژه)",
+  "ruleActionDomainRegex": "دامنه (Regex)",
+  "ruleActionIpCidr": "IP مقصد",
+  "ruleActionDstPort": "پورت مقصد",
+  "ruleActionProcessName": "نام فرآیند",
+  "ruleActionGeosite": "دامنه (Geo)",
+  "ruleActionGeoip": "IP مقصد (Geo)"
 }
 
 

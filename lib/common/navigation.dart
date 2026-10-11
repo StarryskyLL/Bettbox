@@ -32,6 +32,14 @@ class Navigation {
             : [],
       ),
       NavigationItem(
+        icon: const Icon(Icons.call_split),
+        label: PageLabel.splitRouting,
+        builder: (_) =>
+            SplitRoutingView(key: const GlobalObjectKey(PageLabel.splitRouting)),
+        description: 'splitRoutingDesc',
+        modes: [NavigationItemMode.desktop, NavigationItemMode.more],
+      ),
+      NavigationItem(
         icon: const Icon(Icons.folder_shared),
         label: PageLabel.profiles,
         builder: (_) =>

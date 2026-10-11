@@ -431,6 +431,19 @@ Map<String, dynamic> _$SubRuleToJson(_SubRule instance) => <String, dynamic>{
   'name': instance.name,
 };
 
+_GlobalRule _$GlobalRuleFromJson(Map<String, dynamic> json) => _GlobalRule(
+  id: json['id'] as String,
+  value: json['value'] as String,
+  enable: json['enable'] as bool? ?? true,
+);
+
+Map<String, dynamic> _$GlobalRuleToJson(_GlobalRule instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'value': instance.value,
+      'enable': instance.enable,
+    };
+
 _ClashConfigSnippet _$ClashConfigSnippetFromJson(Map<String, dynamic> json) =>
     _ClashConfigSnippet(
       proxyGroups:

@@ -1,4 +1,5 @@
 export 'proxies/proxies.dart';
+export 'split_routing/split_routing.dart';
 export 'dashboard/dashboard.dart';
 export 'tools.dart';
 export 'profiles/profiles.dart';

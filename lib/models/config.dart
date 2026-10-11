@@ -510,6 +510,7 @@ abstract class Config with _$Config {
     @Default(ScriptProps()) ScriptProps scriptProps,
     @Default('') String nodeExcludeFilter,
     @Default(5000) int healthCheckTimeout,
+    @Default([]) List<GlobalRule> globalRules,
   }) = _Config;
 
   factory Config.fromJson(Map<String, Object?> json) => _$ConfigFromJson(json);

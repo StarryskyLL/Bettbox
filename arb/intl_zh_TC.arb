@@ -594,10 +594,10 @@
   "basicConfigDesc": "全域修改內核配置",
   "selectedCountTitle": "已選擇 {count} 項",
   "addRule": "新增規則",
-  "ruleName": "規則名稱",
-  "content": "內容",
+  "ruleName": "類型",
+  "content": "比對",
   "subRule": "子規則",
-  "ruleTarget": "規則目標",
+  "ruleTarget": "節點",
   "sourceIp": "來源 IP",
   "noResolve": "不解析 IP",
   "getOriginRules": "獲取原始規則",
@@ -822,7 +822,21 @@
   "logLevelDebugHint": "{level}模式適合網路偵錯，日常使用建議關閉",
   "collapse": "收起",
   "analyzeLogPrompt": "分析Bettbox(Mihomo)日誌:{log}",
-  "geoBuiltInResources": "GEO 內建資源"
+  "geoBuiltInResources": "GEO 內建資源",
+  "splitRouting": "分流",
+  "splitRoutingDesc": "全域追加分流規則",
+  "splitRoutingApply": "套用",
+  "splitRoutingApplied": "已套用",
+  "ruleActionDomain": "域名",
+  "ruleActionDomainSuffix": "域名（後綴）",
+  "ruleActionDomainWildcard": "域名（萬用字元）",
+  "ruleActionDomainKeyword": "域名（關鍵字）",
+  "ruleActionDomainRegex": "域名（正規表達式）",
+  "ruleActionIpCidr": "目標 IP",
+  "ruleActionDstPort": "目標連接埠",
+  "ruleActionProcessName": "處理程序名稱",
+  "ruleActionGeosite": "域名（Geo）",
+  "ruleActionGeoip": "目標 IP（Geo）"
 }
 
 
