@@ -415,3 +415,35 @@ class HealthCheckTimeout extends _$HealthCheckTimeout
   }
 }
 
+@riverpod
+class GlobalRules extends _$GlobalRules with AutoDisposeNotifierMixin {
+  @override
+  List<GlobalRule> build() {
+    return globalState.config.globalRules;
+  }
+
+  @override
+  onUpdate(value) {
+    globalState.config = globalState.config.copyWith(globalRules: value);
+  }
+
+  void updateState(List<GlobalRule> Function(List<GlobalRule> state) builder) {
+    state = builder(state);
+  }
+
+  void setRule(GlobalRule rule) {
+    final list = List<GlobalRule>.from(state);
+    final index = list.indexWhere((item) => item.id == rule.id);
+    if (index == -1) {
+      list.add(rule);
+    } else {
+      list[index] = rule;
+    }
+    state = list;
+  }
+
+  void deleteById(String id) {
+    state = state.where((item) => item.id != id).toList();
+  }
+}
+

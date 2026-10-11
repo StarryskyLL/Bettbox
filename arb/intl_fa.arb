@@ -574,10 +574,10 @@
   "basicConfigDesc": "تغییر کلی تنظیمات هسته",
   "selectedCountTitle": "{count} مورد انتخاب شده",
   "addRule": "افزودن قانون",
-  "ruleName": "نام قانون",
-  "content": "محتوا",
+  "ruleName": "نوع",
+  "content": "تطبیق",
   "subRule": "زیرقانون",
-  "ruleTarget": "مقصد قانون",
+  "ruleTarget": "گره",
   "sourceIp": "IP مبدا",
   "noResolve": "عدم تحلیل IP",
   "getOriginRules": "دریافت قوانین اصلی",
@@ -794,7 +794,21 @@
   "systemDns": "DNS",
   "enabled": "فعال",
   "disabled": "غیرفعال",
-  "openRouterAdmin": "باز کردن گیت‌وی"
+  "openRouterAdmin": "باز کردن گیت‌وی",
+  "splitRouting": "مسیریابی تفکیکی",
+  "splitRoutingDesc": "افزودن قواعد مسیریابی سراسری",
+  "splitRoutingApply": "اعمال",
+  "splitRoutingApplied": "اعمال شد",
+  "ruleActionDomain": "دامنه",
+  "ruleActionDomainSuffix": "دامنه (پسوند)",
+  "ruleActionDomainWildcard": "دامنه (الگو)",
+  "ruleActionDomainKeyword": "دامنه (کلیدواژه)",
+  "ruleActionDomainRegex": "دامنه (Regex)",
+  "ruleActionIpCidr": "IP مقصد",
+  "ruleActionDstPort": "پورت مقصد",
+  "ruleActionProcessName": "نام فرآیند",
+  "ruleActionGeosite": "دامنه (Geo)",
+  "ruleActionGeoip": "IP مقصد (Geo)"
 }
 
 

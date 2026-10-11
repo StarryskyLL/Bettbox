@@ -667,6 +667,63 @@ abstract class SubRule with _$SubRule {
       _$SubRuleFromJson(json);
 }
 
+/// A user-authored routing rule that is appended to the runtime config
+/// independently of any profile.
+///
+/// Unlike [Rule], which lives inside a profile's override data and is
+/// discarded when the profile changes, [GlobalRule] is stored on the root
+/// [Config] so it survives subscription switches. Disabled entries are kept
+/// on disk but never reach the core.
+@freezed
+abstract class GlobalRule with _$GlobalRule {
+  const factory GlobalRule({
+    required String id,
+    required String value,
+    @Default(true) bool enable,
+  }) = _GlobalRule;
+
+  factory GlobalRule.value(String value, {bool enable = true}) {
+    return GlobalRule(value: value, id: utils.uuidV4, enable: enable);
+  }
+
+  factory GlobalRule.fromJson(Map<String, Object?> json) =>
+      _$GlobalRuleFromJson(json);
+}
+
+extension GlobalRuleExt on GlobalRule {
+  ParsedRule get parsed => ParsedRule.parseString(value);
+
+  /// Bridges to the shared rule editor, which speaks [Rule].
+  Rule get asRule => Rule(id: id, value: value);
+
+  /// Rebuilds from an edited [Rule], preserving the enable flag.
+  GlobalRule mergeEdited(Rule rule) => copyWith(value: rule.value);
+}
+
+extension GlobalRuleListExt on List<GlobalRule> {
+  /// Values of every enabled rule, in display order.
+  List<String> get runningValue {
+    return where((rule) => rule.enable && rule.value.isNotEmpty)
+        .map((rule) => rule.value)
+        .toList();
+  }
+}
+
+/// Prepends [globalRules] to [rules].
+///
+/// These are the user's own rules, so they take precedence over both the
+/// profile override and the subscription. mihomo evaluates rules top-down,
+/// so position is the whole contract here.
+List<dynamic> mergeGlobalRules({
+  required List<String> globalRules,
+  required List<dynamic> rules,
+}) {
+  if (globalRules.isEmpty) {
+    return rules;
+  }
+  return <dynamic>[...globalRules, ...rules];
+}
+
 List<Rule> _genRule(List<dynamic>? rules) {
   if (rules == null) {
     return [];

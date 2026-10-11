@@ -697,7 +697,15 @@ class AddRuleDialog extends StatefulWidget {
   final ClashConfigSnippet snippet;
   final Rule? rule;
 
-  const AddRuleDialog({super.key, required this.snippet, this.rule});
+  /// Restricts the selectable rule types. Defaults to every [RuleAction].
+  final List<RuleAction> actions;
+
+  const AddRuleDialog({
+    super.key,
+    required this.snippet,
+    this.rule,
+    this.actions = RuleAction.values,
+  });
 
   @override
   State<AddRuleDialog> createState() => _AddRuleDialogState();
@@ -711,6 +719,7 @@ class _AddRuleDialogState extends State<AddRuleDialog> {
   final _subRuleController = TextEditingController();
   bool _noResolve = false;
   bool _src = false;
+  List<DropdownMenuEntry<RuleAction>> _actionItems = [];
   List<DropdownMenuEntry<String>> _targetItems = [];
   List<DropdownMenuEntry<String>> _ruleProviderItems = [];
   List<DropdownMenuEntry<String>> _subRuleItems = [];
@@ -723,6 +732,14 @@ class _AddRuleDialogState extends State<AddRuleDialog> {
   }
 
   void _initState() {
+    _actionItems = widget.actions
+        .map(
+          (item) => DropdownMenuEntry<RuleAction>(
+            value: item,
+            label: item.localizedName,
+          ),
+        )
+        .toList();
     _targetItems = [
       ...widget.snippet.proxyGroups.map(
         (item) => DropdownMenuEntry<String>(value: item.name, label: item.name),
@@ -752,7 +769,7 @@ class _AddRuleDialogState extends State<AddRuleDialog> {
       _src = parsedRule.src;
       return;
     }
-    _ruleAction = RuleAction.values.first;
+    _ruleAction = widget.actions.first;
     if (_targetItems.isNotEmpty) {
       _ruleTargetController.text = _targetItems.first.value;
     }
@@ -818,21 +835,22 @@ class _AddRuleDialogState extends State<AddRuleDialog> {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  FilledButton.tonal(
-                    onPressed: () async {
-                      _ruleAction =
-                          await globalState.showCommonDialog<RuleAction>(
-                            child: OptionsDialog<RuleAction>(
-                              title: appLocalizations.ruleName,
-                              options: RuleAction.values,
-                              textBuilder: (item) => item.value,
-                              value: _ruleAction,
-                            ),
-                          ) ??
-                          _ruleAction;
-                      setState(() {});
+                  DropdownMenu<RuleAction>(
+                    initialSelection: _ruleAction,
+                    label: Text(appLocalizations.ruleName),
+                    width: 200,
+                    menuHeight: 250,
+                    enableFilter: false,
+                    enableSearch: false,
+                    dropdownMenuEntries: _actionItems,
+                    onSelected: (value) {
+                      if (value == null) {
+                        return;
+                      }
+                      setState(() {
+                        _ruleAction = value;
+                      });
                     },
-                    child: Text(_ruleAction.name),
                   ),
                   SizedBox(height: 24),
                   _ruleAction == RuleAction.RULE_SET

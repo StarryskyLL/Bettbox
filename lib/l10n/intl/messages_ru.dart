@@ -309,7 +309,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "connectivity": MessageLookupByLibrary.simpleMessage("Подключение: "),
     "contactMe": MessageLookupByLibrary.simpleMessage("Связаться со мной"),
-    "content": MessageLookupByLibrary.simpleMessage("Содержимое"),
+    "content": MessageLookupByLibrary.simpleMessage("Совпадение"),
     "contentScheme": MessageLookupByLibrary.simpleMessage("Контентная тема"),
     "continent": MessageLookupByLibrary.simpleMessage("Континент"),
     "controlSecret": MessageLookupByLibrary.simpleMessage("Пароль управления"),
@@ -1169,10 +1169,34 @@ class MessageLookup extends MessageLookupByLibrary {
       "Вращающаяся плоскость",
     ),
     "rule": MessageLookupByLibrary.simpleMessage("По правилам"),
-    "ruleName": MessageLookupByLibrary.simpleMessage("Имя правила"),
+    "ruleActionDomain": MessageLookupByLibrary.simpleMessage("Домен"),
+    "ruleActionDomainKeyword": MessageLookupByLibrary.simpleMessage(
+      "Домен (ключевое слово)",
+    ),
+    "ruleActionDomainRegex": MessageLookupByLibrary.simpleMessage(
+      "Домен (regex)",
+    ),
+    "ruleActionDomainSuffix": MessageLookupByLibrary.simpleMessage(
+      "Домен (суффикс)",
+    ),
+    "ruleActionDomainWildcard": MessageLookupByLibrary.simpleMessage(
+      "Домен (шаблон)",
+    ),
+    "ruleActionDstPort": MessageLookupByLibrary.simpleMessage(
+      "Порт назначения",
+    ),
+    "ruleActionGeoip": MessageLookupByLibrary.simpleMessage(
+      "IP назначения (Geo)",
+    ),
+    "ruleActionGeosite": MessageLookupByLibrary.simpleMessage("Домен (Geo)"),
+    "ruleActionIpCidr": MessageLookupByLibrary.simpleMessage("IP назначения"),
+    "ruleActionProcessName": MessageLookupByLibrary.simpleMessage(
+      "Имя процесса",
+    ),
+    "ruleName": MessageLookupByLibrary.simpleMessage("Тип"),
     "ruleProviders": MessageLookupByLibrary.simpleMessage("Провайдеры правил"),
     "ruleProvidersCount": MessageLookupByLibrary.simpleMessage("Наборы правил"),
-    "ruleTarget": MessageLookupByLibrary.simpleMessage("Цель правила"),
+    "ruleTarget": MessageLookupByLibrary.simpleMessage("Узел"),
     "rulesCount": MessageLookupByLibrary.simpleMessage("Правила"),
     "runTime": MessageLookupByLibrary.simpleMessage("Время работы"),
     "runtimeConfig": MessageLookupByLibrary.simpleMessage(
@@ -1269,6 +1293,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "specialRules": MessageLookupByLibrary.simpleMessage("Специальные правила"),
     "spinningCircle": MessageLookupByLibrary.simpleMessage("Вращающийся диск"),
     "spinningLines": MessageLookupByLibrary.simpleMessage("Вращающиеся линии"),
+    "splitRouting": MessageLookupByLibrary.simpleMessage(
+      "Раздельная маршрутизация",
+    ),
+    "splitRoutingApplied": MessageLookupByLibrary.simpleMessage("Применено"),
+    "splitRoutingApply": MessageLookupByLibrary.simpleMessage("Применить"),
+    "splitRoutingDesc": MessageLookupByLibrary.simpleMessage(
+      "Добавить глобальные правила",
+    ),
     "squareCircle": MessageLookupByLibrary.simpleMessage("Квадратный круг"),
     "stackMode": MessageLookupByLibrary.simpleMessage("Режим стека"),
     "standard": MessageLookupByLibrary.simpleMessage("Стандарт"),

@@ -574,10 +574,10 @@
   "basicConfigDesc": "글로벌 코어 설정 변경",
   "selectedCountTitle": "{count}개 선택됨",
   "addRule": "규칙 추가",
-  "ruleName": "규칙 이름",
-  "content": "내용",
+  "ruleName": "유형",
+  "content": "일치",
   "subRule": "하위 규칙",
-  "ruleTarget": "규칙 목적지",
+  "ruleTarget": "노드",
   "sourceIp": "출발지 IP",
   "noResolve": "IP 해동 안 함",
   "getOriginRules": "원래 규칙 가져오기",
@@ -794,7 +794,21 @@
   "systemDns": "DNS",
   "enabled": "사용 중",
   "disabled": "사용 안 함",
-  "openRouterAdmin": "게이트웨이 열기"
+  "openRouterAdmin": "게이트웨이 열기",
+  "splitRouting": "분할 라우팅",
+  "splitRoutingDesc": "전역 라우팅 규칙 추가",
+  "splitRoutingApply": "적용",
+  "splitRoutingApplied": "적용됨",
+  "ruleActionDomain": "도메인",
+  "ruleActionDomainSuffix": "도메인(접미사)",
+  "ruleActionDomainWildcard": "도메인(와일드카드)",
+  "ruleActionDomainKeyword": "도메인(키워드)",
+  "ruleActionDomainRegex": "도메인(정규식)",
+  "ruleActionIpCidr": "대상 IP",
+  "ruleActionDstPort": "대상 포트",
+  "ruleActionProcessName": "프로세스 이름",
+  "ruleActionGeosite": "도메인(Geo)",
+  "ruleActionGeoip": "대상 IP(Geo)"
 }
 
 

@@ -4734,14 +4734,14 @@ class AppLocalizations {
     return Intl.message('Add Rule', name: 'addRule', desc: '', args: []);
   }
 
-  /// `Rule Name`
+  /// `Type`
   String get ruleName {
-    return Intl.message('Rule Name', name: 'ruleName', desc: '', args: []);
+    return Intl.message('Type', name: 'ruleName', desc: '', args: []);
   }
 
-  /// `Content`
+  /// `Match`
   String get content {
-    return Intl.message('Content', name: 'content', desc: '', args: []);
+    return Intl.message('Match', name: 'content', desc: '', args: []);
   }
 
   /// `Sub Rule`
@@ -4749,9 +4749,9 @@ class AppLocalizations {
     return Intl.message('Sub Rule', name: 'subRule', desc: '', args: []);
   }
 
-  /// `Rule Target`
+  /// `Node`
   String get ruleTarget {
-    return Intl.message('Rule Target', name: 'ruleTarget', desc: '', args: []);
+    return Intl.message('Node', name: 'ruleTarget', desc: '', args: []);
   }
 
   /// `Source IP`
@@ -6459,6 +6459,136 @@ class AppLocalizations {
     return Intl.message(
       'Open Gateway',
       name: 'openRouterAdmin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Split Routing`
+  String get splitRouting {
+    return Intl.message(
+      'Split Routing',
+      name: 'splitRouting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Append global routing rules`
+  String get splitRoutingDesc {
+    return Intl.message(
+      'Append global routing rules',
+      name: 'splitRoutingDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apply`
+  String get splitRoutingApply {
+    return Intl.message('Apply', name: 'splitRoutingApply', desc: '', args: []);
+  }
+
+  /// `Applied`
+  String get splitRoutingApplied {
+    return Intl.message(
+      'Applied',
+      name: 'splitRoutingApplied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Domain`
+  String get ruleActionDomain {
+    return Intl.message('Domain', name: 'ruleActionDomain', desc: '', args: []);
+  }
+
+  /// `Domain (Suffix)`
+  String get ruleActionDomainSuffix {
+    return Intl.message(
+      'Domain (Suffix)',
+      name: 'ruleActionDomainSuffix',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Domain (Wildcard)`
+  String get ruleActionDomainWildcard {
+    return Intl.message(
+      'Domain (Wildcard)',
+      name: 'ruleActionDomainWildcard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Domain (Keyword)`
+  String get ruleActionDomainKeyword {
+    return Intl.message(
+      'Domain (Keyword)',
+      name: 'ruleActionDomainKeyword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Domain (Regex)`
+  String get ruleActionDomainRegex {
+    return Intl.message(
+      'Domain (Regex)',
+      name: 'ruleActionDomainRegex',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Target IP`
+  String get ruleActionIpCidr {
+    return Intl.message(
+      'Target IP',
+      name: 'ruleActionIpCidr',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Target Port`
+  String get ruleActionDstPort {
+    return Intl.message(
+      'Target Port',
+      name: 'ruleActionDstPort',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Process Name`
+  String get ruleActionProcessName {
+    return Intl.message(
+      'Process Name',
+      name: 'ruleActionProcessName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Domain (Geo)`
+  String get ruleActionGeosite {
+    return Intl.message(
+      'Domain (Geo)',
+      name: 'ruleActionGeosite',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Target IP (Geo)`
+  String get ruleActionGeoip {
+    return Intl.message(
+      'Target IP (Geo)',
+      name: 'ruleActionGeoip',
       desc: '',
       args: [],
     );

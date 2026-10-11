@@ -4097,6 +4097,275 @@ as String,
 
 
 /// @nodoc
+mixin _$GlobalRule {
+
+ String get id; String get value; bool get enable;
+/// Create a copy of GlobalRule
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$GlobalRuleCopyWith<GlobalRule> get copyWith => _$GlobalRuleCopyWithImpl<GlobalRule>(this as GlobalRule, _$identity);
+
+  /// Serializes this GlobalRule to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is GlobalRule&&(identical(other.id, id) || other.id == id)&&(identical(other.value, value) || other.value == value)&&(identical(other.enable, enable) || other.enable == enable));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,value,enable);
+
+@override
+String toString() {
+  return 'GlobalRule(id: $id, value: $value, enable: $enable)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $GlobalRuleCopyWith<$Res>  {
+  factory $GlobalRuleCopyWith(GlobalRule value, $Res Function(GlobalRule) _then) = _$GlobalRuleCopyWithImpl;
+@useResult
+$Res call({
+ String id, String value, bool enable
+});
+
+
+
+
+}
+/// @nodoc
+class _$GlobalRuleCopyWithImpl<$Res>
+    implements $GlobalRuleCopyWith<$Res> {
+  _$GlobalRuleCopyWithImpl(this._self, this._then);
+
+  final GlobalRule _self;
+  final $Res Function(GlobalRule) _then;
+
+/// Create a copy of GlobalRule
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? value = null,Object? enable = null,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,value: null == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
+as String,enable: null == enable ? _self.enable : enable // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [GlobalRule].
+extension GlobalRulePatterns on GlobalRule {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _GlobalRule value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _GlobalRule() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _GlobalRule value)  $default,){
+final _that = this;
+switch (_that) {
+case _GlobalRule():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _GlobalRule value)?  $default,){
+final _that = this;
+switch (_that) {
+case _GlobalRule() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String value,  bool enable)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _GlobalRule() when $default != null:
+return $default(_that.id,_that.value,_that.enable);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String value,  bool enable)  $default,) {final _that = this;
+switch (_that) {
+case _GlobalRule():
+return $default(_that.id,_that.value,_that.enable);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String value,  bool enable)?  $default,) {final _that = this;
+switch (_that) {
+case _GlobalRule() when $default != null:
+return $default(_that.id,_that.value,_that.enable);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class _GlobalRule implements GlobalRule {
+  const _GlobalRule({required this.id, required this.value, this.enable = true});
+  factory _GlobalRule.fromJson(Map<String, dynamic> json) => _$GlobalRuleFromJson(json);
+
+@override final  String id;
+@override final  String value;
+@override@JsonKey() final  bool enable;
+
+/// Create a copy of GlobalRule
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$GlobalRuleCopyWith<_GlobalRule> get copyWith => __$GlobalRuleCopyWithImpl<_GlobalRule>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$GlobalRuleToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GlobalRule&&(identical(other.id, id) || other.id == id)&&(identical(other.value, value) || other.value == value)&&(identical(other.enable, enable) || other.enable == enable));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,value,enable);
+
+@override
+String toString() {
+  return 'GlobalRule(id: $id, value: $value, enable: $enable)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$GlobalRuleCopyWith<$Res> implements $GlobalRuleCopyWith<$Res> {
+  factory _$GlobalRuleCopyWith(_GlobalRule value, $Res Function(_GlobalRule) _then) = __$GlobalRuleCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String value, bool enable
+});
+
+
+
+
+}
+/// @nodoc
+class __$GlobalRuleCopyWithImpl<$Res>
+    implements _$GlobalRuleCopyWith<$Res> {
+  __$GlobalRuleCopyWithImpl(this._self, this._then);
+
+  final _GlobalRule _self;
+  final $Res Function(_GlobalRule) _then;
+
+/// Create a copy of GlobalRule
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? value = null,Object? enable = null,}) {
+  return _then(_GlobalRule(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,value: null == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
+as String,enable: null == enable ? _self.enable : enable // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
+}
+
+
+}
+
+
+/// @nodoc
 mixin _$ClashConfigSnippet {
 
 @JsonKey(name: 'proxy-groups') List<ProxyGroup> get proxyGroups;@JsonKey(fromJson: _genRule, name: 'rules') List<Rule> get rule;@JsonKey(name: 'rule-providers', fromJson: _genRuleProviders) List<RuleProvider> get ruleProvider;@JsonKey(name: 'sub-rules', fromJson: _genSubRules) List<SubRule> get subRules;

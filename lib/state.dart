@@ -1108,6 +1108,14 @@ class GlobalState {
       rules = [...quicRules, ...rules];
     }
 
+    // The user's own rules are appended on every core start, ahead of both the
+    // profile override rules and the subscription rules. They are stored on the
+    // root config rather than a profile, so they survive subscription switches.
+    rules = mergeGlobalRules(
+      globalRules: config.globalRules.runningValue,
+      rules: rules,
+    );
+
     if (rawConfig['proxy-groups'] == null && originalProxyGroups != null) {
       rawConfig['proxy-groups'] = originalProxyGroups;
     }

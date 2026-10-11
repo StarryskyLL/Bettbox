@@ -329,5 +329,21 @@ final healthCheckTimeoutProvider =
     );
 
 typedef _$HealthCheckTimeout = AutoDisposeNotifier<int>;
+String _$globalRulesHash() => r'b9e8feae7cab921dea15c2ebd776a8b967b281c6';
+
+/// See also [GlobalRules].
+@ProviderFor(GlobalRules)
+final globalRulesProvider =
+    AutoDisposeNotifierProvider<GlobalRules, List<GlobalRule>>.internal(
+      GlobalRules.new,
+      name: r'globalRulesProvider',
+      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$globalRulesHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
+
+typedef _$GlobalRules = AutoDisposeNotifier<List<GlobalRule>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

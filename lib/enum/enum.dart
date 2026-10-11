@@ -365,6 +365,7 @@ enum GeodataLoader { standard, memconservative }
 enum PageLabel {
   dashboard,
   proxies,
+  splitRouting,
   profiles,
   tools,
   logs,
@@ -381,6 +382,8 @@ extension PageLabelExtension on PageLabel {
         return appLocalizations.dashboard;
       case PageLabel.proxies:
         return appLocalizations.proxies;
+      case PageLabel.splitRouting:
+        return appLocalizations.splitRouting;
       case PageLabel.profiles:
         return appLocalizations.profiles;
       case PageLabel.tools:
@@ -403,6 +406,7 @@ extension PageLabelExtension on PageLabel {
 enum RuleAction {
   DOMAIN('DOMAIN'),
   DOMAIN_SUFFIX('DOMAIN-SUFFIX'),
+  DOMAIN_WILDCARD('DOMAIN-WILDCARD'),
   DOMAIN_KEYWORD('DOMAIN-KEYWORD'),
   DOMAIN_REGEX('DOMAIN-REGEX'),
   GEOSITE('GEOSITE'),
@@ -450,6 +454,36 @@ extension RuleActionExt on RuleAction {
     RuleAction.IP_SUFFIX,
     RuleAction.RULE_SET,
   ].contains(this);
+
+  /// Human readable label for the rule type, so the editor does not have to
+  /// show the raw mihomo token.
+  String get localizedName {
+    switch (this) {
+      case RuleAction.DOMAIN:
+        return appLocalizations.ruleActionDomain;
+      case RuleAction.DOMAIN_SUFFIX:
+        return appLocalizations.ruleActionDomainSuffix;
+      case RuleAction.DOMAIN_WILDCARD:
+        return appLocalizations.ruleActionDomainWildcard;
+      case RuleAction.DOMAIN_KEYWORD:
+        return appLocalizations.ruleActionDomainKeyword;
+      case RuleAction.DOMAIN_REGEX:
+        return appLocalizations.ruleActionDomainRegex;
+      case RuleAction.IP_CIDR:
+      case RuleAction.IP_CIDR6:
+        return appLocalizations.ruleActionIpCidr;
+      case RuleAction.DST_PORT:
+        return appLocalizations.ruleActionDstPort;
+      case RuleAction.PROCESS_NAME:
+        return appLocalizations.ruleActionProcessName;
+      case RuleAction.GEOSITE:
+        return appLocalizations.ruleActionGeosite;
+      case RuleAction.GEOIP:
+        return appLocalizations.ruleActionGeoip;
+      default:
+        return value;
+    }
+  }
 }
 
 enum OverrideRuleType { override, added }

@@ -599,6 +599,11 @@ _Config _$ConfigFromJson(Map<String, dynamic> json) => _Config(
       : ScriptProps.fromJson(json['scriptProps'] as Map<String, dynamic>),
   nodeExcludeFilter: json['nodeExcludeFilter'] as String? ?? '',
   healthCheckTimeout: (json['healthCheckTimeout'] as num?)?.toInt() ?? 5000,
+  globalRules:
+      (json['globalRules'] as List<dynamic>?)
+          ?.map((e) => GlobalRule.fromJson(e as Map<String, dynamic>))
+          .toList() ??
+      const [],
 );
 
 Map<String, dynamic> _$ConfigToJson(_Config instance) => <String, dynamic>{
@@ -622,4 +627,5 @@ Map<String, dynamic> _$ConfigToJson(_Config instance) => <String, dynamic>{
   'scriptProps': instance.scriptProps,
   'nodeExcludeFilter': instance.nodeExcludeFilter,
   'healthCheckTimeout': instance.healthCheckTimeout,
+  'globalRules': instance.globalRules,
 };

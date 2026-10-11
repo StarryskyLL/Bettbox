@@ -574,10 +574,10 @@
   "basicConfigDesc": "Global core settings",
   "selectedCountTitle": "{count} items selected",
   "addRule": "Add Rule",
-  "ruleName": "Rule Name",
-  "content": "Content",
+  "ruleName": "Type",
+  "content": "Match",
   "subRule": "Sub Rule",
-  "ruleTarget": "Rule Target",
+  "ruleTarget": "Node",
   "sourceIp": "Source IP",
   "noResolve": "No Resolve",
   "getOriginRules": "Original Rules",
@@ -793,7 +793,21 @@
   "systemDns": "DNS",
   "enabled": "Enabled",
   "disabled": "Disabled",
-  "openRouterAdmin": "Open Gateway"
+  "openRouterAdmin": "Open Gateway",
+  "splitRouting": "Split Routing",
+  "splitRoutingDesc": "Append global routing rules",
+  "splitRoutingApply": "Apply",
+  "splitRoutingApplied": "Applied",
+  "ruleActionDomain": "Domain",
+  "ruleActionDomainSuffix": "Domain (Suffix)",
+  "ruleActionDomainWildcard": "Domain (Wildcard)",
+  "ruleActionDomainKeyword": "Domain (Keyword)",
+  "ruleActionDomainRegex": "Domain (Regex)",
+  "ruleActionIpCidr": "Target IP",
+  "ruleActionDstPort": "Target Port",
+  "ruleActionProcessName": "Process Name",
+  "ruleActionGeosite": "Domain (Geo)",
+  "ruleActionGeoip": "Target IP (Geo)"
 }
 
 

@@ -48,21 +48,6 @@ Bettbox意为: Better Experience, Out of the box - 更好的体验，亦开箱�
 * **社区导向**：我们会认真评估社区反馈，优先对待高质量的 Issue，你的声音不会无故被淹没。
 
 ---
-</div>
-
-###   🛩️ 推荐服务
-### IEPL 专线  〢  [百变小樱](https://www.bbxy01.com/v2/register?code=c09R)
-
-### 专享68折优惠码：bettbox68
-
-**简评** : ❚ ❚  老牌小众专线，海外团队运营多年，大厂BGP入口+广港&沪日线路，折后约17元/月或127元/年，解锁流媒体与AI，延迟与口碑优秀，适合对稳定性要求较高的用户，小技巧：别忘了使用68折优惠码，以及后台个人中心签到每日可再额外领取5-10GB流量
-
---------------------------------
-### 性价比直连  〢  [良心云](https://xn--9kqz23b19z.com/#/register?code=VTnrQYAj)  〢  [吹雪云](https://xn--9kqs1lo79d.com/#/register?code=skKMTab7)  〢  [一分](https://xn--4gqx1hgtfdmt.com/#/register?code=AuCiXprV)
-
-**简评** : ❚  大流量或资源机为主，运营相对稳定，起步价格较低，888G / 1000G不限时套餐通常更有性价比，量大管饱，价格低廉，适合要求不高的用户或备用流量及大流量下载选择
-
----
 ## 🛠️ 安装与下载
 
 请前往 **[[Releases]](https://github.com/appshubcc/Bettbox/releases)** 页面下载最新适合您平台和系统的安装包
@@ -137,14 +122,6 @@ const Compatible_With_Bettbox = {
 
 * 未声明 `policyGroupOptions`、或声明的名称与开关不匹配时，展示效果与旧版本完全一致（所有开关平铺展示）。
 
----
-
-### ☕ 赞助支持
-
-**如果您觉得这个项目对您有所帮助，可通过以下方式赞助开发或使用[推荐链接](https://github.com/appshubcc/Bettbox#%EF%B8%8F-%E6%8E%A8%E8%8D%90%E6%9C%8D%E5%8A%A1)：**
-
-* TRON (TRC-20)：   <code>TCkTtZfF2WrciZLaJj3e1aqrh3zdTnCkDa</code>
-* Bitcoin： <code>bc1qu950cl6035qvllmzk6cfw3l30j2lg3cq9n6g6h</code>
 ---
 
 ##  致谢
